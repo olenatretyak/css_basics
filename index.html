@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>CSS Basics</title>
+
+	<style type="text/css">
+		/* #1 */
+
+		ul:first-of-type {
+		  background-color: green;
+		}
+
+		ul:last-of-type {
+		  background-color: blue;
+		}
+
+		/*2*/
+
+		li:nth-child(even) {
+		  background-color: red;
+		}
+
+		/*3*/
+
+		li:not([class="no-strike"]) {
+		  color: grey;
+		  text-decoration: line-through;
+		}
+
+		/*4*/
+
+		li[data-content='whoa']:before {
+		  content: attr(data-content) "--";
+		}
+
+		li[data-content='test']:before {
+		  content: attr(data-content) "--";
+		}
+
+		/*5*/
+		li[class='before-content']:before {
+		  content: "--" open-quote "xx";
+		}
+	</style>
+</head>
+<body>
+	<ul>
+	  <li class="no-strike">1</li>
+	  <li class="no-strike">2</li>
+	  <li data-content='whoa'>3</li>
+	  <li data-content='test'>4</li>
+	  <li class="before-content">5</li>
+	  <li class="before-content">6</li>
+	  <li class="before-content">7</li>
+	  <li>8</li>
+	</ul>
+
+	<ul>
+	  <li>9</li>
+	  <li>10</li>
+	  <li>11</li>
+	</ul>
+
+	<ul>
+	  <li>12</li>
+	  <li>13</li>
+	  <li>14</li>
+	</ul>
+
+	<ul>
+	  <li>15</li>
+	  <li>16</li>
+	</ul>
+
+</body>
+</html>
